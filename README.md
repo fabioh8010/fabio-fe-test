@@ -8,16 +8,10 @@
 npm install
 ```
 
-### 2. Install Gulp if you don't have it yet
+### 2. Run build task
 
 ```bash
-npm install -g gulp
-```
-
-### 3. Run build task
-
-```bash
-gulp
+npm run build
 ```
 
 ## How to run the project
