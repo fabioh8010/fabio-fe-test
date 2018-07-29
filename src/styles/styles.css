@@ -1,2 +1,13 @@
-html {
-  background-color: #333; }
+.page-header {
+  margin-left: 208px;
+  margin-right: 203px; }
+
+html, body {
+  background-color: #FFF;
+  margin: 0; }
+
+.page-header {
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }

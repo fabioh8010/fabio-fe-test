@@ -1,5 +1,21 @@
-$primary-color: #333;
+$page-color: #FFF;
+$page-margin-left: 208px;
+$page-margin-right: 203px;
 
-html {
-  background-color: $primary-color;
+%page-margin {
+  margin-left: $page-margin-left;
+  margin-right: $page-margin-right;
+}
+
+html, body {
+  background-color: $page-color;
+  margin: 0;
+}
+
+.page-header {
+  @extend %page-margin;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
