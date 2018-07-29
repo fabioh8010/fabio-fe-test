@@ -2,20 +2,44 @@ $page-color: #FFF;
 $page-margin-left: 208px;
 $page-margin-right: 203px;
 
-%page-margin {
-  margin-left: $page-margin-left;
-  margin-right: $page-margin-right;
+$page-nav-color: #F2F2F2;
+
+%page-padding {
+  padding-left: $page-margin-left;
+  padding-right: $page-margin-right;
 }
 
 html, body {
   background-color: $page-color;
   margin: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .page-header {
-  @extend %page-margin;
+  @extend %page-padding;
   height: 120px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.page-nav {
+  @extend %page-padding;
+  background-color: $page-nav-color;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #494949;
+      font-weight: 700;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+  }
 }

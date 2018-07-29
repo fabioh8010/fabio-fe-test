@@ -1,13 +1,29 @@
-.page-header {
-  margin-left: 208px;
-  margin-right: 203px; }
+.page-header, .page-nav {
+  padding-left: 208px;
+  padding-right: 203px; }
 
 html, body {
   background-color: #FFF;
-  margin: 0; }
+  margin: 0;
+  font-family: 'PT Sans', sans-serif; }
 
 .page-header {
   height: 120px;
   display: flex;
   justify-content: flex-start;
   align-items: center; }
+
+.page-nav {
+  background-color: #F2F2F2;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .page-nav a {
+    display: flex;
+    align-items: center; }
+    .page-nav a span {
+      color: #494949;
+      font-weight: 700;
+      font-size: 14px;
+      margin-left: 8px; }
