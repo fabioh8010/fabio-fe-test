@@ -1,22 +1,25 @@
 $page-color: #FFF;
-$page-margin-left: 208px;
-$page-margin-right: 203px;
+$page-outer-padding: 164px;
+$page-inner-padding-1: 20px;
+$page-inner-padding-2: 24px;
+$page-padding: $page-outer-padding + $page-inner-padding-1 + $page-inner-padding-2;
 
 $page-nav-color: #F2F2F2;
 
-%page-padding {
-  padding-left: $page-margin-left;
-  padding-right: $page-margin-right;
+@mixin horizontal-padding($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
 }
 
 html, body {
   background-color: $page-color;
   margin: 0;
   font-family: 'PT Sans', sans-serif;
+  font-size: 100%;
 }
 
 .page-header {
-  @extend %page-padding;
+  @include horizontal-padding($page-padding);
   height: 120px;
   display: flex;
   justify-content: flex-start;
@@ -24,7 +27,7 @@ html, body {
 }
 
 .page-nav {
-  @extend %page-padding;
+  @include horizontal-padding($page-padding);
   background-color: $page-nav-color;
   height: 75px;
   display: flex;
@@ -38,15 +41,37 @@ html, body {
     span {
       color: #494949;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 1rem;
       margin-left: 8px;
     }
   }
 }
 
-.page-image {
-  height: 510px;
-  background-image: url('../images/background-1.jpg');
-  background-size: cover;
-  background-position: center center;
+#menu-item-1 {
+  .image {
+    height: 510px;
+    background-image: url('../images/background-1.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  article {
+    @include horizontal-padding($page-outer-padding + $page-inner-padding-1);
+
+    h1 {
+      @include horizontal-padding($page-inner-padding-2);
+      color: #0099FF;
+      font-weight: 400;
+      font-size: 2.5rem;
+    }
+
+    p {
+      @include horizontal-padding($page-inner-padding-2);
+    }
+
+    .highlight {
+      background-color: #0099FF;
+      color: white;
+    }
+  }
 }

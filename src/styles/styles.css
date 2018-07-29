@@ -1,19 +1,20 @@
-.page-header, .page-nav {
-  padding-left: 208px;
-  padding-right: 203px; }
-
 html, body {
   background-color: #FFF;
   margin: 0;
-  font-family: 'PT Sans', sans-serif; }
+  font-family: 'PT Sans', sans-serif;
+  font-size: 100%; }
 
 .page-header {
+  padding-left: 208px;
+  padding-right: 208px;
   height: 120px;
   display: flex;
   justify-content: flex-start;
   align-items: center; }
 
 .page-nav {
+  padding-left: 208px;
+  padding-right: 208px;
   background-color: #F2F2F2;
   height: 75px;
   display: flex;
@@ -25,11 +26,27 @@ html, body {
     .page-nav a span {
       color: #494949;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 1rem;
       margin-left: 8px; }
 
-.page-image {
+#menu-item-1 .image {
   height: 510px;
   background-image: url("../images/background-1.jpg");
   background-size: cover;
   background-position: center center; }
+
+#menu-item-1 article {
+  padding-left: 184px;
+  padding-right: 184px; }
+  #menu-item-1 article h1 {
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #0099FF;
+    font-weight: 400;
+    font-size: 2.5rem; }
+  #menu-item-1 article p {
+    padding-left: 24px;
+    padding-right: 24px; }
+  #menu-item-1 article .highlight {
+    background-color: #0099FF;
+    color: white; }
