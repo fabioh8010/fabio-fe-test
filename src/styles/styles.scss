@@ -43,3 +43,10 @@ html, body {
     }
   }
 }
+
+.page-image {
+  height: 510px;
+  background-image: url('../images/background-1.jpg');
+  background-size: cover;
+  background-position: center center;
+}

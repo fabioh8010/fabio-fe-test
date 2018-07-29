@@ -27,3 +27,9 @@ html, body {
       font-weight: 700;
       font-size: 14px;
       margin-left: 8px; }
+
+.page-image {
+  height: 510px;
+  background-image: url("../images/background-1.jpg");
+  background-size: cover;
+  background-position: center center; }
