@@ -136,3 +136,14 @@ html, body {
 
 .cta-2 {
   background-image: url("../images/cta-background-2.jpg"); }
+
+#menu-item-3 article {
+  padding-left: 208px;
+  padding-right: 208px;
+  padding-bottom: 32px; }
+  #menu-item-3 article h1 {
+    color: #E6007D;
+    font-weight: 400;
+    font-size: 2.5rem; }
+  #menu-item-3 article p {
+    color: #514C4C; }

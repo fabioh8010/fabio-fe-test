@@ -201,3 +201,20 @@ html, body {
   @extend %cta;
   background-image: url('../images/cta-background-2.jpg');
 }
+
+#menu-item-3 {
+  article {
+    @include horizontal-padding($page-padding);
+    padding-bottom: 32px;
+
+    h1 {
+      color: #E6007D;
+      font-weight: 400;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #514C4C;
+    }
+  }
+}
