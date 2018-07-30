@@ -13,7 +13,7 @@ gulp.task('default', ['build'])
 // Build tasks
 
 gulp.task('build', function (callback) {
-  runSequence('clean-dist-folder', ['hint-js', 'uglify-js', 'minify-html', 'minify-css'], callback)
+  runSequence('clean-dist-folder', ['hint-js', 'uglify-js', 'minify-html', 'minify-css', 'copy-images'], callback)
 })
 
 gulp.task('clean-dist-folder', function () {
@@ -47,6 +47,11 @@ gulp.task('minify-css', function () {
     .pipe(sass())
     .pipe(cleanCSS())
     .pipe(gulp.dest('dist/styles'))
+})
+
+gulp.task('copy-images', function () {
+  return gulp.src('src/images/*')
+    .pipe(gulp.dest('dist/images'))
 })
 
 // Development tasks
