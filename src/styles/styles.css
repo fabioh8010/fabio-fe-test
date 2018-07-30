@@ -29,26 +29,26 @@ html, body {
       font-size: 1rem;
       margin-left: 8px; }
 
-#menu-item-1 figure {
+.menu-item-1 figure {
   margin: 0;
   height: 510px;
   background-image: url("../images/background-1.jpg");
   background-size: cover;
   background-position: center center; }
 
-#menu-item-1 article {
+.menu-item-1 article {
   padding-left: 184px;
   padding-right: 184px; }
-  #menu-item-1 article h1 {
+  .menu-item-1 article h1 {
     padding-left: 24px;
     padding-right: 24px;
     color: #0099FF;
     font-weight: 400;
     font-size: 2.5rem; }
-  #menu-item-1 article p {
+  .menu-item-1 article p {
     padding-left: 24px;
     padding-right: 24px; }
-  #menu-item-1 article .highlight {
+  .menu-item-1 article .highlight {
     background-color: #0099FF;
     color: white; }
 
@@ -92,31 +92,31 @@ html, body {
 .cta-1 {
   background-image: url("../images/cta-background-1.jpg"); }
 
-#menu-item-2 > article {
+.menu-item-2 > article {
   padding-left: 208px;
   padding-right: 208px; }
-  #menu-item-2 > article h1 {
+  .menu-item-2 > article h1 {
     color: #EE8600;
     font-weight: 400;
     font-size: 2.5rem; }
-  #menu-item-2 > article div {
+  .menu-item-2 > article div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start; }
-    #menu-item-2 > article div > article:first-child {
+    .menu-item-2 > article div > article:first-child {
       padding-right: 32px; }
-    #menu-item-2 > article div > article:last-child {
+    .menu-item-2 > article div > article:last-child {
       padding-left: 32px; }
-  #menu-item-2 > article > article table {
+  .menu-item-2 > article > article table {
     margin-top: 16px;
     margin-bottom: 32px;
     border-collapse: collapse;
     width: 100%; }
-    #menu-item-2 > article > article table thead {
+    .menu-item-2 > article > article table thead {
       background-color: #EE8600;
       color: white; }
-      #menu-item-2 > article > article table thead th {
+      .menu-item-2 > article > article table thead th {
         border-top: 2px solid #EE8600;
         border-left: 2px solid white;
         border-right: 2px solid white;
@@ -124,11 +124,11 @@ html, body {
         width: 66%;
         height: 44px;
         text-align: center; }
-        #menu-item-2 > article > article table thead th:first-child {
+        .menu-item-2 > article > article table thead th:first-child {
           border-left: 2px solid #EE8600; }
-        #menu-item-2 > article > article table thead th:last-child {
+        .menu-item-2 > article > article table thead th:last-child {
           border-right: 2px solid #EE8600; }
-    #menu-item-2 > article > article table tbody td {
+    .menu-item-2 > article > article table tbody td {
       border: 2px solid #EE8600;
       width: 33%;
       height: 44px;
@@ -137,13 +137,13 @@ html, body {
 .cta-2 {
   background-image: url("../images/cta-background-2.jpg"); }
 
-#menu-item-3 article {
+.menu-item-3 article {
   padding-left: 208px;
   padding-right: 208px;
   padding-bottom: 32px; }
-  #menu-item-3 article h1 {
+  .menu-item-3 article h1 {
     color: #E6007D;
     font-weight: 400;
     font-size: 2.5rem; }
-  #menu-item-3 article p {
+  .menu-item-3 article p {
     color: #514C4C; }

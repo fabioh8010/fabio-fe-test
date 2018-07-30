@@ -47,7 +47,7 @@ html, body {
   }
 }
 
-#menu-item-1 {
+.menu-item-1 {
   figure {
     margin: 0;
     height: 510px;
@@ -127,7 +127,7 @@ html, body {
   background-image: url('../images/cta-background-1.jpg');
 }
 
-#menu-item-2 {
+.menu-item-2 {
   > article {
     @include horizontal-padding($page-padding);
 
@@ -202,7 +202,7 @@ html, body {
   background-image: url('../images/cta-background-2.jpg');
 }
 
-#menu-item-3 {
+.menu-item-3 {
   article {
     @include horizontal-padding($page-padding);
     padding-bottom: 32px;
