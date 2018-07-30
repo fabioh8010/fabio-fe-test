@@ -126,3 +126,73 @@ html, body {
 .cta-1 {
   @include cta(url('../images/cta-background-1.jpg'));
 }
+
+#menu-item-2 {
+  > article {
+    @include horizontal-padding($page-padding);
+
+    h1 {
+      color: #EE8600;
+      font-weight: 400;
+      font-size: 2.5rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      > article {
+        &:first-child {
+          padding-right: 32px;
+        }
+
+        &:last-child {
+          padding-left: 32px;
+        }
+      }
+    }
+
+    > article {
+      table {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        border-collapse: collapse;
+        width: 100%;
+
+        thead {
+          background-color: #EE8600;
+          color: white;
+
+          th {
+            border-top: 2px solid #EE8600;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            border-bottom: 2px solid #EE8600;
+            width: 66%;
+            height: 44px;
+            text-align: center;
+
+            &:first-child {
+              border-left: 2px solid #EE8600;
+            }
+
+            &:last-child {
+              border-right: 2px solid #EE8600;
+            }
+          }
+        }
+
+        tbody {
+          td {
+            border: 2px solid #EE8600;
+            width: 33%;
+            height: 44px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

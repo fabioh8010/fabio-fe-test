@@ -89,3 +89,45 @@ html, body {
         font-weight: 700;
         color: white;
         text-align: center; }
+
+#menu-item-2 > article {
+  padding-left: 208px;
+  padding-right: 208px; }
+  #menu-item-2 > article h1 {
+    color: #EE8600;
+    font-weight: 400;
+    font-size: 2.5rem; }
+  #menu-item-2 > article div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; }
+    #menu-item-2 > article div > article:first-child {
+      padding-right: 32px; }
+    #menu-item-2 > article div > article:last-child {
+      padding-left: 32px; }
+  #menu-item-2 > article > article table {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    border-collapse: collapse;
+    width: 100%; }
+    #menu-item-2 > article > article table thead {
+      background-color: #EE8600;
+      color: white; }
+      #menu-item-2 > article > article table thead th {
+        border-top: 2px solid #EE8600;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        border-bottom: 2px solid #EE8600;
+        width: 66%;
+        height: 44px;
+        text-align: center; }
+        #menu-item-2 > article > article table thead th:first-child {
+          border-left: 2px solid #EE8600; }
+        #menu-item-2 > article > article table thead th:last-child {
+          border-right: 2px solid #EE8600; }
+    #menu-item-2 > article > article table tbody td {
+      border: 2px solid #EE8600;
+      width: 33%;
+      height: 44px;
+      text-align: center; }
