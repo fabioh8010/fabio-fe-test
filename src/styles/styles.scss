@@ -1,10 +1,21 @@
 $page-color: #FFF;
-$page-outer-padding: 164px;
 $page-inner-padding-1: 20px;
 $page-inner-padding-2: 24px;
-$page-padding: $page-outer-padding + $page-inner-padding-1 + $page-inner-padding-2;
+$page-font-size: 16px;
 
 $page-nav-color: #F2F2F2;
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: 960px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 650px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 450px)  { @content; }
+  }
+}
 
 @mixin horizontal-padding($padding) {
   padding-left: $padding;
@@ -20,7 +31,15 @@ html, body {
   background-color: $page-color;
   margin: 0;
   font-family: 'PT Sans', sans-serif;
-  font-size: 100%;
+  font-size: $page-font-size;
+
+  @include breakpoint(medium) {
+    font-size: 14px;
+  }
+
+  @include breakpoint(small) {
+    font-size: 12px;
+  }
 }
 
 .page-header {
@@ -52,6 +71,10 @@ html, body {
         font-weight: 700;
         font-size: 1rem;
         margin-left: 8px;
+
+        @include breakpoint(small) {
+          display: none;
+        }
       }
     }
   }
@@ -60,10 +83,19 @@ html, body {
 .menu-item-1 {
   figure {
     margin: 0;
-    height: 510px;
     background-image: url('../images/background-1.jpg');
     background-size: cover;
     background-position: center center;
+
+    height: 510px;
+
+    @include breakpoint(medium) {
+      height: 400px;
+    }
+
+    @include breakpoint(small) {
+      height: 300px;
+    }
   }
 
   article {
@@ -91,10 +123,15 @@ html, body {
 %cta {
   min-height: 241px;
   background-size: cover;
-  background-position: center top;
   display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
+
+  background-position: center 25%;
+
+  @include breakpoint(large) {
+    background-position: center top;
+  }
 
   article {
     @extend %page-limits;
@@ -116,19 +153,21 @@ html, body {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 240px;
-      width: 240px;
       padding: 12px 24px 12px 24px;
       border: 3px solid white;
       border-radius: 3px;
 
       span {
-        flex-grow: 1;
-        margin-left: 8px;
+        margin-left: 32px;
+        margin-right: 32px;
         font-size: 1rem;
         font-weight: 700;
         color: white;
         text-align: center;
+
+        @include breakpoint(large) {
+          font-size: $page-font-size;
+        }
       }
     }
   }
@@ -156,13 +195,25 @@ html, body {
       justify-content: space-between;
       align-items: flex-start;
 
+      @include breakpoint(small) {
+        flex-wrap: wrap;
+      }
+
       > article {
         &:first-child {
           padding-right: 32px;
+
+          @include breakpoint(small) {
+            padding-right: 0;
+          }
         }
 
         &:last-child {
           padding-left: 32px;
+
+          @include breakpoint(small) {
+            padding-left: 0;
+          }
         }
       }
     }
@@ -240,40 +291,55 @@ footer {
 
   address {
     @extend %page-limits;
-    @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
+    @include horizontal-padding($page-inner-padding-1);
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     span {
       color: white;
       font-size: 1rem;
       font-style: normal;
+      margin: 8px 8px 8px 8px;
     }
-  
+
+    .line {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
     .social-media {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-  
+      margin: 8px 0 8px 0;
+
       * {
         margin: 0 8px 0 8px;
       }
     }
-  
+
     .email {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-  
+      margin: 8px 0 8px 0;
+
       * {
         margin: 0 8px 0 8px;
       }
+    }
+
+    .by-diamond {
+      margin: 8px 0 8px 0;
     }
   }
 }

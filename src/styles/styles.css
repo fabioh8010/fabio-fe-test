@@ -6,7 +6,13 @@ html, body {
   background-color: #FFF;
   margin: 0;
   font-family: 'PT Sans', sans-serif;
-  font-size: 100%; }
+  font-size: 16px; }
+  @media (max-width: 650px) {
+    html, body {
+      font-size: 14px; } }
+  @media (max-width: 450px) {
+    html, body {
+      font-size: 12px; } }
 
 .page-header {
   padding-left: 44px;
@@ -33,13 +39,22 @@ html, body {
         font-weight: 700;
         font-size: 1rem;
         margin-left: 8px; }
+        @media (max-width: 450px) {
+          .page-nav div a span {
+            display: none; } }
 
 .menu-item-1 figure {
   margin: 0;
-  height: 510px;
   background-image: url("../images/background-1.jpg");
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  height: 510px; }
+  @media (max-width: 650px) {
+    .menu-item-1 figure {
+      height: 400px; } }
+  @media (max-width: 450px) {
+    .menu-item-1 figure {
+      height: 300px; } }
 
 .menu-item-1 article {
   padding-left: 20px;
@@ -60,10 +75,13 @@ html, body {
 .cta-1, .cta-2 {
   min-height: 241px;
   background-size: cover;
-  background-position: center top;
   display: flex;
   padding-top: 24px;
-  padding-bottom: 24px; }
+  padding-bottom: 24px;
+  background-position: center 25%; }
+  @media (max-width: 960px) {
+    .cta-1, .cta-2 {
+      background-position: center top; } }
   .cta-1 article, .cta-2 article {
     padding-left: 44px;
     padding-right: 44px;
@@ -81,18 +99,19 @@ html, body {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 240px;
-      width: 240px;
       padding: 12px 24px 12px 24px;
       border: 3px solid white;
       border-radius: 3px; }
       .cta-1 article a span, .cta-2 article a span {
-        flex-grow: 1;
-        margin-left: 8px;
+        margin-left: 32px;
+        margin-right: 32px;
         font-size: 1rem;
         font-weight: 700;
         color: white;
         text-align: center; }
+        @media (max-width: 960px) {
+          .cta-1 article a span, .cta-2 article a span {
+            font-size: 16px; } }
 
 .cta-1 {
   background-image: url("../images/cta-background-1.jpg"); }
@@ -109,10 +128,19 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start; }
+    @media (max-width: 450px) {
+      .menu-item-2 > article div {
+        flex-wrap: wrap; } }
     .menu-item-2 > article div > article:first-child {
       padding-right: 32px; }
+      @media (max-width: 450px) {
+        .menu-item-2 > article div > article:first-child {
+          padding-right: 0; } }
     .menu-item-2 > article div > article:last-child {
       padding-left: 32px; }
+      @media (max-width: 450px) {
+        .menu-item-2 > article div > article:last-child {
+          padding-left: 0; } }
   .menu-item-2 > article > article table {
     margin-top: 16px;
     margin-bottom: 32px;
@@ -158,29 +186,40 @@ footer {
   background-color: #5CBBE4;
   display: flex; }
   footer address {
-    padding-left: 44px;
-    padding-right: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center; }
     footer address span {
       color: white;
       font-size: 1rem;
-      font-style: normal; }
+      font-style: normal;
+      margin: 8px 8px 8px 8px; }
+    footer address .line {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
     footer address .social-media {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin: 8px 0 8px 0; }
       footer address .social-media * {
         margin: 0 8px 0 8px; }
     footer address .email {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin: 8px 0 8px 0; }
       footer address .email * {
         margin: 0 8px 0 8px; }
+    footer address .by-diamond {
+      margin: 8px 0 8px 0; }
