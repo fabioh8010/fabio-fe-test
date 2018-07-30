@@ -22,6 +22,16 @@ $page-nav-color: #F2F2F2;
   padding-right: $padding;
 }
 
+@mixin icon($width, $height, $image, $hoverImage) {
+  width: $width;
+  height: $height;
+  background-image: $image;
+
+  &:hover {
+    background-image: $hoverImage;
+  }
+}
+
 %page-limits {
   max-width: 960px;
   margin: auto;
@@ -42,6 +52,10 @@ html, body {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .page-header {
   @extend %page-limits;
   @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
@@ -54,7 +68,7 @@ html, body {
 .page-nav {
   background-color: $page-nav-color;
 
-  div {
+  > div {
     @extend %page-limits;
     @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
     height: 75px;
@@ -75,6 +89,34 @@ html, body {
         @include breakpoint(small) {
           display: none;
         }
+      }
+
+      &:hover span {
+        color: #F8971D;
+      }
+
+      &:hover .icon-1 {
+        background-image: url("../images/menu-item-1-hover.png");
+      }
+
+      &:hover .icon-2 {
+        background-image: url("../images/menu-item-2-hover.png");
+      }
+
+      &:hover .icon-3 {
+        background-image: url("../images/menu-item-3-hover.png");
+      }
+
+      .icon-1 {
+        @include icon(37px, 31px, url("../images/menu-item-1.png"), url("../images/menu-item-1-hover.png"));
+      }
+
+      .icon-2 {
+        @include icon(45px, 31px, url("../images/menu-item-2.png"), url("../images/menu-item-2-hover.png"));
+      }
+
+      .icon-3 {
+        @include icon(36px, 36px, url("../images/menu-item-3.png"), url("../images/menu-item-3-hover.png"));
       }
     }
   }
@@ -156,6 +198,12 @@ html, body {
       padding: 12px 24px 12px 24px;
       border: 3px solid white;
       border-radius: 3px;
+      opacity: 0.85;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #0099FF;
+      }
 
       span {
         margin-left: 32px;
@@ -299,13 +347,6 @@ footer {
     justify-content: space-around;
     align-items: center;
 
-    span {
-      color: white;
-      font-size: 1rem;
-      font-style: normal;
-      margin: 8px 8px 8px 8px;
-    }
-
     .line {
       display: flex;
       flex-wrap: wrap;
@@ -326,7 +367,7 @@ footer {
       }
     }
 
-    .email {
+    .email-info {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -336,10 +377,52 @@ footer {
       * {
         margin: 0 8px 0 8px;
       }
+
+      &:hover span {
+        text-decoration: underline;
+      }
+
+      &:hover div {
+        background-image: url("../images/email-hover.png");
+      }
+    }
+
+    span, .link {
+      color: white;
+      font-size: 1rem;
+      font-style: normal;
+      margin: 8px 8px 8px 8px;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    .facebook {
+      @include icon(37px, 37px, url("../images/facebook.png"), url("../images/facebook-hover.png"));
+    }
+
+    .twitter {
+      @include icon(37px, 37px, url("../images/twitter.png"), url("../images/twitter-hover.png"));
+    }
+
+    .google-plus {
+      @include icon(34px, 34px, url("../images/google-plus.png"), url("../images/google-plus-hover.png"));
+    }
+
+    .email {
+      @include icon(34px, 34px, url("../images/email.png"), url("../images/email-hover.png"));
+    }
+
+    .instagram {
+      @include icon(37px, 37px, url("../images/instagram.png"), url("../images/instagram-hover.png"));
     }
 
     .by-diamond {
       margin: 8px 0 8px 0;
+      width: 158px;
+      height: 25px;
+      background-image: url("../images/by-diamond.png");
     }
   }
 }

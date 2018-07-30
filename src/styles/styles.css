@@ -1,4 +1,4 @@
-.page-header, .page-nav div, .menu-item-1 article, .cta-1 article, .cta-2 article, .menu-item-2 > article, .menu-item-3 article, footer address {
+.page-header, .page-nav > div, .menu-item-1 article, .cta-1 article, .cta-2 article, .menu-item-2 > article, .menu-item-3 article, footer address {
   max-width: 960px;
   margin: auto; }
 
@@ -14,6 +14,9 @@ html, body {
     html, body {
       font-size: 12px; } }
 
+a {
+  text-decoration: none; }
+
 .page-header {
   padding-left: 44px;
   padding-right: 44px;
@@ -24,24 +27,50 @@ html, body {
 
 .page-nav {
   background-color: #F2F2F2; }
-  .page-nav div {
+  .page-nav > div {
     padding-left: 44px;
     padding-right: 44px;
     height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .page-nav div a {
+    .page-nav > div a {
       display: flex;
       align-items: center; }
-      .page-nav div a span {
+      .page-nav > div a span {
         color: #494949;
         font-weight: 700;
         font-size: 1rem;
         margin-left: 8px; }
         @media (max-width: 450px) {
-          .page-nav div a span {
+          .page-nav > div a span {
             display: none; } }
+      .page-nav > div a:hover span {
+        color: #F8971D; }
+      .page-nav > div a:hover .icon-1 {
+        background-image: url("../images/menu-item-1-hover.png"); }
+      .page-nav > div a:hover .icon-2 {
+        background-image: url("../images/menu-item-2-hover.png"); }
+      .page-nav > div a:hover .icon-3 {
+        background-image: url("../images/menu-item-3-hover.png"); }
+      .page-nav > div a .icon-1 {
+        width: 37px;
+        height: 31px;
+        background-image: url("../images/menu-item-1.png"); }
+        .page-nav > div a .icon-1:hover {
+          background-image: url("../images/menu-item-1-hover.png"); }
+      .page-nav > div a .icon-2 {
+        width: 45px;
+        height: 31px;
+        background-image: url("../images/menu-item-2.png"); }
+        .page-nav > div a .icon-2:hover {
+          background-image: url("../images/menu-item-2-hover.png"); }
+      .page-nav > div a .icon-3 {
+        width: 36px;
+        height: 36px;
+        background-image: url("../images/menu-item-3.png"); }
+        .page-nav > div a .icon-3:hover {
+          background-image: url("../images/menu-item-3-hover.png"); }
 
 .menu-item-1 figure {
   margin: 0;
@@ -101,7 +130,11 @@ html, body {
       align-items: center;
       padding: 12px 24px 12px 24px;
       border: 3px solid white;
-      border-radius: 3px; }
+      border-radius: 3px;
+      opacity: 0.85; }
+      .cta-1 article a:hover, .cta-2 article a:hover {
+        cursor: pointer;
+        background-color: #0099FF; }
       .cta-1 article a span, .cta-2 article a span {
         margin-left: 32px;
         margin-right: 32px;
@@ -194,11 +227,6 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center; }
-    footer address span {
-      color: white;
-      font-size: 1rem;
-      font-style: normal;
-      margin: 8px 8px 8px 8px; }
     footer address .line {
       display: flex;
       flex-wrap: wrap;
@@ -213,13 +241,57 @@ footer {
       margin: 8px 0 8px 0; }
       footer address .social-media * {
         margin: 0 8px 0 8px; }
-    footer address .email {
+    footer address .email-info {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       margin: 8px 0 8px 0; }
-      footer address .email * {
+      footer address .email-info * {
         margin: 0 8px 0 8px; }
+      footer address .email-info:hover span {
+        text-decoration: underline; }
+      footer address .email-info:hover div {
+        background-image: url("../images/email-hover.png"); }
+    footer address span, footer address .link {
+      color: white;
+      font-size: 1rem;
+      font-style: normal;
+      margin: 8px 8px 8px 8px; }
+    footer address .link:hover {
+      text-decoration: underline; }
+    footer address .facebook {
+      width: 37px;
+      height: 37px;
+      background-image: url("../images/facebook.png"); }
+      footer address .facebook:hover {
+        background-image: url("../images/facebook-hover.png"); }
+    footer address .twitter {
+      width: 37px;
+      height: 37px;
+      background-image: url("../images/twitter.png"); }
+      footer address .twitter:hover {
+        background-image: url("../images/twitter-hover.png"); }
+    footer address .google-plus {
+      width: 34px;
+      height: 34px;
+      background-image: url("../images/google-plus.png"); }
+      footer address .google-plus:hover {
+        background-image: url("../images/google-plus-hover.png"); }
+    footer address .email {
+      width: 34px;
+      height: 34px;
+      background-image: url("../images/email.png"); }
+      footer address .email:hover {
+        background-image: url("../images/email-hover.png"); }
+    footer address .instagram {
+      width: 37px;
+      height: 37px;
+      background-image: url("../images/instagram.png"); }
+      footer address .instagram:hover {
+        background-image: url("../images/instagram-hover.png"); }
     footer address .by-diamond {
-      margin: 8px 0 8px 0; }
+      margin: 8px 0 8px 0;
+      width: 158px;
+      height: 25px;
+      background-image: url("../images/by-diamond.png"); }
