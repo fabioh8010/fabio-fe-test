@@ -196,3 +196,7 @@ html, body {
     }
   }
 }
+
+.cta-2 {
+  @include cta(url('../images/cta-background-2.jpg'));
+}
