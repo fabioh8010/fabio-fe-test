@@ -29,7 +29,8 @@ html, body {
       font-size: 1rem;
       margin-left: 8px; }
 
-#menu-item-1 .image {
+#menu-item-1 figure {
+  margin: 0;
   height: 510px;
   background-image: url("../images/background-1.jpg");
   background-size: cover;
@@ -50,3 +51,41 @@ html, body {
   #menu-item-1 article .highlight {
     background-color: #0099FF;
     color: white; }
+
+.cta-1 {
+  min-height: 241px;
+  background-image: url("../images/cta-background-1.jpg");
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  padding-left: 208px;
+  padding-right: 208px;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  .cta-1 article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .cta-1 article p {
+      margin: 0;
+      padding: 0 24px 32px 24px;
+      font-size: 1.25rem;
+      color: white;
+      text-align: center; }
+    .cta-1 article a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 240px;
+      width: 240px;
+      padding: 12px 24px 12px 24px;
+      border: 3px solid white;
+      border-radius: 3px; }
+      .cta-1 article a span {
+        flex-grow: 1;
+        margin-left: 8px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        text-align: center; }
