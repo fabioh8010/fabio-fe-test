@@ -218,3 +218,47 @@ html, body {
     }
   }
 }
+
+footer {
+  @include horizontal-padding($page-outer-padding + $page-inner-padding-1);
+  min-height: 80px;
+  background-color: #5CBBE4;
+  display: flex;
+
+  address {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: white;
+      font-size: 1rem;
+      font-style: normal;
+    }
+  
+    .social-media {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  
+      * {
+        margin: 0 8px 0 8px;
+      }
+    }
+  
+    .email {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  
+      * {
+        margin: 0 8px 0 8px;
+      }
+    }
+  }
+}
