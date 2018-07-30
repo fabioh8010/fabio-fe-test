@@ -49,7 +49,6 @@ gulp.task('minify-css', function () {
     .pipe(gulp.dest('dist/styles'))
 })
 
-
 // Development tasks
 
 gulp.task('serve', ['sass-serve'], function () {
@@ -57,9 +56,9 @@ gulp.task('serve', ['sass-serve'], function () {
     server: 'src/'
   })
 
-  gulp.watch('src/styles/styles.scss', ['sass-serve']);
-  gulp.watch('src/scripts/scripts.js').on('change', browserSync.reload);
-  gulp.watch('src/index.html').on('change', browserSync.reload);
+  gulp.watch('src/styles/styles.scss', ['sass-serve'])
+  gulp.watch('src/scripts/scripts.js').on('change', browserSync.reload)
+  gulp.watch('src/index.html').on('change', browserSync.reload)
 })
 
 gulp.task('sass-serve', function () {
