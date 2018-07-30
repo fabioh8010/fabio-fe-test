@@ -11,6 +11,11 @@ $page-nav-color: #F2F2F2;
   padding-right: $padding;
 }
 
+%page-limits {
+  max-width: 960px;
+  margin: auto;
+}
+
 html, body {
   background-color: $page-color;
   margin: 0;
@@ -19,7 +24,8 @@ html, body {
 }
 
 .page-header {
-  @include horizontal-padding($page-padding);
+  @extend %page-limits;
+  @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
   height: 120px;
   display: flex;
   justify-content: flex-start;
@@ -27,22 +33,26 @@ html, body {
 }
 
 .page-nav {
-  @include horizontal-padding($page-padding);
   background-color: $page-nav-color;
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  a {
+  div {
+    @extend %page-limits;
+    @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
+    height: 75px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    span {
-      color: #494949;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-left: 8px;
+    a {
+      display: flex;
+      align-items: center;
+  
+      span {
+        color: #494949;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-left: 8px;
+      }
     }
   }
 }
@@ -57,7 +67,8 @@ html, body {
   }
 
   article {
-    @include horizontal-padding($page-outer-padding + $page-inner-padding-1);
+    @extend %page-limits;
+    @include horizontal-padding($page-inner-padding-1);
 
     h1 {
       @include horizontal-padding($page-inner-padding-2);
@@ -82,11 +93,12 @@ html, body {
   background-size: cover;
   background-position: center top;
   display: flex;
-  @include horizontal-padding($page-padding);
   padding-top: 24px;
   padding-bottom: 24px;
 
   article {
+    @extend %page-limits;
+    @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -129,7 +141,8 @@ html, body {
 
 .menu-item-2 {
   > article {
-    @include horizontal-padding($page-padding);
+    @extend %page-limits;
+    @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
 
     h1 {
       color: #EE8600;
@@ -204,7 +217,8 @@ html, body {
 
 .menu-item-3 {
   article {
-    @include horizontal-padding($page-padding);
+    @extend %page-limits;
+    @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
     padding-bottom: 32px;
 
     h1 {
@@ -220,12 +234,13 @@ html, body {
 }
 
 footer {
-  @include horizontal-padding($page-outer-padding + $page-inner-padding-1);
   min-height: 80px;
   background-color: #5CBBE4;
   display: flex;
 
   address {
+    @extend %page-limits;
+    @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
