@@ -77,9 +77,8 @@ html, body {
   }
 }
 
-@mixin cta($background-image) {
+%cta {
   min-height: 241px;
-  background-image: $background-image;
   background-size: cover;
   background-position: center top;
   display: flex;
@@ -124,7 +123,8 @@ html, body {
 }
 
 .cta-1 {
-  @include cta(url('../images/cta-background-1.jpg'));
+  @extend %cta;
+  background-image: url('../images/cta-background-1.jpg');
 }
 
 #menu-item-2 {
@@ -198,5 +198,6 @@ html, body {
 }
 
 .cta-2 {
-  @include cta(url('../images/cta-background-2.jpg'));
+  @extend %cta;
+  background-image: url('../images/cta-background-2.jpg');
 }
