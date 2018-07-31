@@ -138,12 +138,21 @@ a {
     background-color: #0099FF;
     color: white; }
 
+.cta-1 article, .cta-2 article, .cta-1 .layer-1, .cta-1 .layer-2, .cta-2 .layer-1, .cta-2 .layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
 .cta-1, .cta-2 {
   min-height: 241px;
   background-size: cover;
   display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
+  position: relative;
+  background-image: url("../images/cta-background.jpg");
   background-position: center 25%; }
   @media (max-width: 960px) {
     .cta-1, .cta-2 {
@@ -151,6 +160,8 @@ a {
   .cta-1 article, .cta-2 article {
     padding-left: 44px;
     padding-right: 44px;
+    margin-top: 24px;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -188,8 +199,17 @@ a {
         width: 27px;
         height: 27px; }
 
-.cta-1 {
-  background-image: url("../images/cta-background-1.jpg"); }
+.cta-1 .layer-1 {
+  background-color: rgba(0, 153, 255, 0.4); }
+
+.cta-1 .layer-2 {
+  background-color: rgba(242, 177, 12, 0.6); }
+
+.cta-2 .layer-1 {
+  background-color: rgba(242, 120, 12, 0.4); }
+
+.cta-2 .layer-2 {
+  background-color: rgba(242, 177, 12, 0.6); }
 
 .menu-item-2 > article {
   padding-left: 44px;
@@ -241,9 +261,6 @@ a {
       width: 33%;
       height: 44px;
       text-align: center; }
-
-.cta-2 {
-  background-image: url("../images/cta-background-2.jpg"); }
 
 .menu-item-3 article {
   padding-left: 44px;

@@ -182,12 +182,34 @@ a {
   }
 }
 
+%absolute-fill {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin cta-layers($layer1Color, $layer2Color) {
+  .layer-1 {
+    @extend %absolute-fill;
+    background-color: $layer1Color;
+  }
+
+  .layer-2 {
+    @extend %absolute-fill;
+    background-color: $layer2Color;
+  }
+}
+
 %cta {
   min-height: 241px;
   background-size: cover;
   display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
+  position: relative;
+  background-image: url('../images/cta-background.jpg');
 
   background-position: center 25%;
 
@@ -198,6 +220,9 @@ a {
   article {
     @extend %page-limits;
     @include horizontal-padding($page-inner-padding-1 + $page-inner-padding-2);
+    @extend %absolute-fill;
+    margin-top: 24px;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -247,7 +272,12 @@ a {
 
 .cta-1 {
   @extend %cta;
-  background-image: url('../images/cta-background-1.jpg');
+  @include cta-layers(rgba(0, 153, 255, 0.4), rgba(242, 177, 12, 0.6));
+}
+
+.cta-2 {
+  @extend %cta;
+  @include cta-layers(rgba(242, 120, 12, 0.4), rgba(242, 177, 12, 0.6));
 }
 
 .menu-item-2 {
@@ -331,11 +361,6 @@ a {
       }
     }
   }
-}
-
-.cta-2 {
-  @extend %cta;
-  background-image: url('../images/cta-background-2.jpg');
 }
 
 .menu-item-3 {
