@@ -13,6 +13,12 @@
   }
 }
 
+@mixin ie11-only() {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
 @mixin horizontal-padding($padding) {
   padding-left: $padding;
   padding-right: $padding;
@@ -77,6 +83,12 @@
     justify-content: space-around;
     align-items: center;
 
+    @include ie11-only() {
+      margin-top: 48px;
+      display: block;
+      max-width: 100%;
+    }
+
     p {
       margin: 0;
       padding: 0 24px 32px 24px;
@@ -93,6 +105,11 @@
       border: 3px solid $white;
       border-radius: 3px;
       opacity: 0.85;
+
+      @include ie11-only() {
+        margin: auto;
+        max-width: 300px;
+      }
 
       &:hover {
         cursor: pointer;

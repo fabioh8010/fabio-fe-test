@@ -266,12 +266,16 @@ footer {
   address {
     @extend %page-limits;
     @include horizontal-padding($page-inner-padding-1);
-    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-grow: 1;
+
+    @include ie11-only() {
+      flex-grow: 0;
+    }
 
     .line {
       display: flex;
