@@ -7,6 +7,7 @@ const cleanCSS = require('gulp-clean-css')
 const runSequence = require('run-sequence')
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')
+const concat = require('gulp-concat')
 
 gulp.task('default', ['build'])
 
@@ -31,8 +32,9 @@ gulp.task('hint-js', function () {
 })
 
 gulp.task('uglify-js', function () {
-  return gulp.src('src/scripts/scripts.js')
+  return gulp.src('src/scripts/*.js')
     .pipe(uglify())
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('dist/scripts'))
 })
 
