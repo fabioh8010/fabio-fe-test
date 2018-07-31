@@ -24,6 +24,11 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
+  .page-header .company-logo {
+    background-image: url(../images/sprites.png);
+    background-position: 0px 0px;
+    width: 181px;
+    height: 77px; }
 
 .page-nav {
   overflow: hidden;
@@ -56,29 +61,50 @@ a {
       .page-nav > div a:hover span {
         color: #F8971D; }
       .page-nav > div a:hover .icon-1 {
-        background-image: url("../images/menu-item-1-hover.png"); }
-      .page-nav > div a:hover .icon-2 {
-        background-image: url("../images/menu-item-2-hover.png"); }
-      .page-nav > div a:hover .icon-3 {
-        background-image: url("../images/menu-item-3-hover.png"); }
-      .page-nav > div a .icon-1 {
+        background-image: url(../images/sprites.png);
+        background-position: -90px -102px;
         width: 37px;
-        height: 31px;
-        background-image: url("../images/menu-item-1.png"); }
-        .page-nav > div a .icon-1:hover {
-          background-image: url("../images/menu-item-1-hover.png"); }
-      .page-nav > div a .icon-2 {
+        height: 31px; }
+      .page-nav > div a:hover .icon-2 {
+        background-image: url(../images/sprites.png);
+        background-position: -45px -102px;
         width: 45px;
-        height: 31px;
-        background-image: url("../images/menu-item-2.png"); }
-        .page-nav > div a .icon-2:hover {
-          background-image: url("../images/menu-item-2-hover.png"); }
-      .page-nav > div a .icon-3 {
+        height: 31px; }
+      .page-nav > div a:hover .icon-3 {
+        background-image: url(../images/sprites.png);
+        background-position: -181px -74px;
         width: 36px;
-        height: 36px;
-        background-image: url("../images/menu-item-3.png"); }
+        height: 36px; }
+      .page-nav > div a .icon-1 {
+        background-image: url(../images/sprites.png);
+        background-position: -127px -102px;
+        width: 37px;
+        height: 31px; }
+        .page-nav > div a .icon-1:hover {
+          background-image: url(../images/sprites.png);
+          background-position: -90px -102px;
+          width: 37px;
+          height: 31px; }
+      .page-nav > div a .icon-2 {
+        background-image: url(../images/sprites.png);
+        background-position: 0px -102px;
+        width: 45px;
+        height: 31px; }
+        .page-nav > div a .icon-2:hover {
+          background-image: url(../images/sprites.png);
+          background-position: -45px -102px;
+          width: 45px;
+          height: 31px; }
+      .page-nav > div a .icon-3 {
+        background-image: url(../images/sprites.png);
+        background-position: -181px -110px;
+        width: 36px;
+        height: 36px; }
         .page-nav > div a .icon-3:hover {
-          background-image: url("../images/menu-item-3-hover.png"); }
+          background-image: url(../images/sprites.png);
+          background-position: -181px -74px;
+          width: 36px;
+          height: 36px; }
 
 .sticky-nav + .menu-item-1 {
   padding-top: 75px; }
@@ -156,6 +182,11 @@ a {
         @media (max-width: 960px) {
           .cta-1 article a span, .cta-2 article a span {
             font-size: 16px; } }
+      .cta-1 article a .download, .cta-2 article a .download {
+        background-image: url(../images/sprites.png);
+        background-position: -148px -133px;
+        width: 27px;
+        height: 27px; }
 
 .cta-1 {
   background-image: url("../images/cta-background-1.jpg"); }
@@ -263,7 +294,10 @@ footer {
       footer address .email-info:hover span {
         text-decoration: underline; }
       footer address .email-info:hover div {
-        background-image: url("../images/email-hover.png"); }
+        background-image: url(../images/sprites.png);
+        background-position: -102px -170px;
+        width: 34px;
+        height: 34px; }
     footer address span, footer address .link {
       color: white;
       font-size: 1rem;
@@ -272,37 +306,58 @@ footer {
     footer address .link:hover {
       text-decoration: underline; }
     footer address .facebook {
+      background-image: url(../images/sprites.png);
+      background-position: -74px -133px;
       width: 37px;
-      height: 37px;
-      background-image: url("../images/facebook.png"); }
+      height: 37px; }
       footer address .facebook:hover {
-        background-image: url("../images/facebook-hover.png"); }
+        background-image: url(../images/sprites.png);
+        background-position: -37px -133px;
+        width: 37px;
+        height: 37px; }
     footer address .twitter {
+      background-image: url(../images/sprites.png);
+      background-position: -181px 0px;
       width: 37px;
-      height: 37px;
-      background-image: url("../images/twitter.png"); }
+      height: 37px; }
       footer address .twitter:hover {
-        background-image: url("../images/twitter-hover.png"); }
+        background-image: url(../images/sprites.png);
+        background-position: 0px -133px;
+        width: 37px;
+        height: 37px; }
     footer address .google-plus {
+      background-image: url(../images/sprites.png);
+      background-position: 0px -170px;
       width: 34px;
-      height: 34px;
-      background-image: url("../images/google-plus.png"); }
+      height: 34px; }
       footer address .google-plus:hover {
-        background-image: url("../images/google-plus-hover.png"); }
+        background-image: url(../images/sprites.png);
+        background-position: -34px -170px;
+        width: 34px;
+        height: 34px; }
     footer address .email {
+      background-image: url(../images/sprites.png);
+      background-position: -68px -170px;
       width: 34px;
-      height: 34px;
-      background-image: url("../images/email.png"); }
+      height: 34px; }
       footer address .email:hover {
-        background-image: url("../images/email-hover.png"); }
+        background-image: url(../images/sprites.png);
+        background-position: -102px -170px;
+        width: 34px;
+        height: 34px; }
     footer address .instagram {
+      background-image: url(../images/sprites.png);
+      background-position: -111px -133px;
       width: 37px;
-      height: 37px;
-      background-image: url("../images/instagram.png"); }
+      height: 37px; }
       footer address .instagram:hover {
-        background-image: url("../images/instagram-hover.png"); }
+        background-image: url(../images/sprites.png);
+        background-position: -181px -37px;
+        width: 37px;
+        height: 37px; }
     footer address .by-diamond {
-      margin: 8px 0 8px 0;
+      background-image: url(../images/sprites.png);
+      background-position: 0px -77px;
       width: 158px;
       height: 25px;
-      background-image: url("../images/by-diamond.png"); }
+      margin: 8px 0 8px 0; }

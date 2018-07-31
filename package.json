@@ -19,6 +19,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-standard": "^11.0.0",
     "gulp-uglify": "^3.0.1",
+    "gulp.spritesmith": "^6.9.0",
+    "merge-stream": "^1.0.1",
     "run-sequence": "^2.2.1",
     "standard": "^11.0.1"
   }

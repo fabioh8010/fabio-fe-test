@@ -5,6 +5,8 @@ $page-font-size: 16px;
 
 $page-nav-color: #F2F2F2;
 
+@import 'sprites';
+
 @mixin breakpoint($point) {
   @if $point == large {
     @media (max-width: 960px) { @content; }
@@ -22,13 +24,11 @@ $page-nav-color: #F2F2F2;
   padding-right: $padding;
 }
 
-@mixin icon($width, $height, $image, $hoverImage) {
-  width: $width;
-  height: $height;
-  background-image: $image;
+@mixin icon($image, $hoverImage) {
+  @include sprite($image);
 
   &:hover {
-    background-image: $hoverImage;
+    @include sprite($hoverImage);
   }
 }
 
@@ -63,6 +63,10 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  .company-logo {
+    @include sprite($company-logo);
+  }
 }
 
 .page-nav {
@@ -108,27 +112,27 @@ a {
       }
 
       &:hover .icon-1 {
-        background-image: url("../images/menu-item-1-hover.png");
+        @include sprite($menu-item-1-hover);
       }
 
       &:hover .icon-2 {
-        background-image: url("../images/menu-item-2-hover.png");
+        @include sprite($menu-item-2-hover);
       }
 
       &:hover .icon-3 {
-        background-image: url("../images/menu-item-3-hover.png");
+        @include sprite($menu-item-3-hover);
       }
 
       .icon-1 {
-        @include icon(37px, 31px, url("../images/menu-item-1.png"), url("../images/menu-item-1-hover.png"));
+        @include icon($menu-item-1, $menu-item-1-hover);
       }
 
       .icon-2 {
-        @include icon(45px, 31px, url("../images/menu-item-2.png"), url("../images/menu-item-2-hover.png"));
+        @include icon($menu-item-2, $menu-item-2-hover);
       }
 
       .icon-3 {
-        @include icon(36px, 36px, url("../images/menu-item-3.png"), url("../images/menu-item-3-hover.png"));
+        @include icon($menu-item-3, $menu-item-3-hover);
       }
     }
   }
@@ -232,6 +236,10 @@ a {
         @include breakpoint(large) {
           font-size: $page-font-size;
         }
+      }
+
+      .download {
+        @include sprite($download);
       }
     }
   }
@@ -399,7 +407,7 @@ footer {
       }
 
       &:hover div {
-        background-image: url("../images/email-hover.png");
+        @include sprite($email-hover);
       }
     }
 
@@ -415,30 +423,28 @@ footer {
     }
 
     .facebook {
-      @include icon(37px, 37px, url("../images/facebook.png"), url("../images/facebook-hover.png"));
+      @include icon($facebook, $facebook-hover);
     }
 
     .twitter {
-      @include icon(37px, 37px, url("../images/twitter.png"), url("../images/twitter-hover.png"));
+      @include icon($twitter, $twitter-hover);
     }
 
     .google-plus {
-      @include icon(34px, 34px, url("../images/google-plus.png"), url("../images/google-plus-hover.png"));
+      @include icon($google-plus, $google-plus-hover);
     }
 
     .email {
-      @include icon(34px, 34px, url("../images/email.png"), url("../images/email-hover.png"));
+      @include icon($email, $email-hover);
     }
 
     .instagram {
-      @include icon(37px, 37px, url("../images/instagram.png"), url("../images/instagram-hover.png"));
+      @include icon($instagram, $instagram-hover);
     }
 
     .by-diamond {
+      @include sprite($by-diamond);
       margin: 8px 0 8px 0;
-      width: 158px;
-      height: 25px;
-      background-image: url("../images/by-diamond.png");
     }
   }
 }
