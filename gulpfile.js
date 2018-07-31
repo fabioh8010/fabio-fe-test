@@ -10,6 +10,7 @@ const sass = require('gulp-sass')
 const concat = require('gulp-concat')
 const spritesmith = require('gulp.spritesmith')
 const merge = require('merge-stream')
+const removeHtml = require('gulp-remove-html')
 
 gulp.task('default', ['build'])
 
@@ -42,6 +43,7 @@ gulp.task('uglify-js', function () {
 
 gulp.task('minify-html', function () {
   return gulp.src('src/index.html')
+    .pipe(removeHtml())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist'))
 })
