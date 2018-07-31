@@ -51,6 +51,8 @@ a {
         @media (max-width: 450px) {
           .page-nav > div a span {
             display: none; } }
+      .page-nav > div a:hover {
+        cursor: pointer; }
       .page-nav > div a:hover span {
         color: #F8971D; }
       .page-nav > div a:hover .icon-1 {

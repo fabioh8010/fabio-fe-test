@@ -99,6 +99,10 @@ a {
         }
       }
 
+      &:hover {
+        cursor: pointer;
+      }
+
       &:hover span {
         color: #F8971D;
       }
